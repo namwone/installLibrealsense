@@ -7,8 +7,9 @@ red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
 # e.g. echo "${red}red text ${green}green text${reset}"
-echo "${green}Adding Universe repository and updating${reset}"
-apt-add-repository universe
+# uncomment below 2 lines if you don't have Universe repository
+# echo "${green}Adding Universe repository and updating${reset}"
+# apt-add-repository universe
 apt-get update
 echo "${green}Adding dependencies, graphics libraries and tools${reset}"
 apt-get install libssl-dev libusb-1.0-0-dev pkg-config -y
@@ -23,4 +24,3 @@ apt-get install qtcreator -y
 
 # Add Python 3 support
 apt-get install -y python3 python3-dev
-
